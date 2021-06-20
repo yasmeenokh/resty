@@ -18,7 +18,7 @@ You will also see any lint errors in the console.
 
 ## Links 
 
-[Pull Request]()
+[Pull Request](https://github.com/yasmeenokh/resty/pull/2)
 
 [Heroku Link](https://yasmeen-resty.herokuapp.com/)
 
