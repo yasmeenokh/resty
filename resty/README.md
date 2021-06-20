@@ -1,4 +1,3 @@
-
 # Resty App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -20,6 +19,6 @@ You will also see any lint errors in the console.
 
 [Pull Request]()
 
-[Heroku Link](https://yasmeen-resty.herokuapp.com/)
+[Heroku Link]()
 
 [Repo Link](https://github.com/yasmeenokh/resty/tree/base)
