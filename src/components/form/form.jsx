@@ -1,59 +1,59 @@
-
 import React from 'react';
-import './form.scss'
+import Superagent from 'superagent';
+import './form.scss';
 
 class Form extends React.Component{
     constructor(props){
         super(props);
-        this.state={
-            url: '',
-            method: ''
+        this.state ={
+            url:'',
+            method:''
         }
     }
-    inputHandler = (e)=>{
-        e.preventDefault();
-        this.setState({input: e.target.value})
+
+
+
+    inputHandler =  (event)=>{
+
+        this.setState({url:event.target.value})
+
     }
-    urlHandler = ()=>{
-        this.setState({
-            url: this.state.input,
-            method: this.state.method
+
+    methodHandler = (event)=>{
+        
+        this.setState({method:event.target.value})
+    }
+    submitHandler =  async (event)=>{
+        event.preventDefault();
+        let raw =  await Superagent.get(this.state.url,{      
         })
+        let setHeaders = {
+            Headers:raw.headers
+        }
+        let apiData =  {
+            Response:raw.body.results
+        }
+        console.log(raw.headers)
+        this.props.handler(raw.body.count,apiData,setHeaders) 
     }
-    methodHandler = (e)=>{
-        e.preventDefault();
-        this.setState({method: e.target.innerHTML})
-    }
+
     render(){
-        return(
-            <main>
-                <div className='formDiv'>
-                <form>
-                    <label>
-                        URL:
-                    </label>
-                    <input name= 'url' type='text' placeholder='http://url'
-                    onChange={this.inputHandler}
-                    />
-                    <button type='button' onClick={this.urlHandler}>GO</button>
-                </form>
-                </div>
-                    <div className='buttons'>
-                        <button onClick={this.methodHandler}>GET</button>
-                        <button onClick={this.methodHandler}>POST</button>
-                        <button onClick={this.methodHandler}>PUT</button>
-                        <button onClick={this.methodHandler}>DELETE</button>
-                    </div>
-                    <div className='result'>
-                        <ul>
-                            <li>
-                                {this.state.method}  {this.state.url}
-                            </li>
-                        </ul>
-                    </div>
-            </main>
+        return (
+        <div  className="formDiv">
+            <form className= 'formURL' action={this.state.method} onSubmit={this.submitHandler}>
+                <label htmlFor="url">URL</label>
+                <input onChange={this.inputHandler} type="url"  name="url"/>
+                <input type="submit" value="GO" className="button"/>
+            </form>
+            <form onChange={this.methodHandler}  className="buttons">
+                <input type="button" id="GET" value="GET" className="button"/>
+                <input type="button" id="POST" value="POST" className="button"/>
+                <input type="button" id="PUT" value="PUT" className="button"/>
+                <input type="button" id="DELETE" value="DELETE" className="button"/>
+            </form>
+        </div>
         )
-    }
+ } 
 }
 
 export default Form;
