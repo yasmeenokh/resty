@@ -15,8 +15,11 @@ The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
 ![uml](images/resty.png)
+![uml](images/lab27.png)
 
 ## Links 
+
+[Pull Request](https://github.com/yasmeenokh/resty/pull/3)
 
 [Pull Request](https://github.com/yasmeenokh/resty/pull/2)
 
