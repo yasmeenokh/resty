@@ -39,8 +39,8 @@ class Form extends React.Component{
     render(){
         return (
         <div  className="formDiv">
-            <form className= 'formURL' action={this.state.method} onSubmit={this.submitHandler}>
-                <label htmlFor="url">URL</label>
+            <form action={this.state.method} onSubmit={this.submitHandler}>
+                <label>URL</label>
                 <input onChange={this.inputHandler} type="url"  name="url"/>
                 <input type="submit" value="GO" className="button"/>
             </form>
