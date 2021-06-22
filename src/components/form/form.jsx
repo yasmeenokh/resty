@@ -25,8 +25,7 @@ class Form extends React.Component{
     }
     submitHandler =  async (event)=>{
         event.preventDefault();
-        let raw =  await Superagent.get(this.state.url,{      
-        })
+        let raw =  await Superagent.get(this.state.url)
         let setHeaders = {
             Headers:raw.headers
         }
