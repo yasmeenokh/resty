@@ -38,3 +38,5 @@ You will also see any lint errors in the console.
 [Heroku Link](https://yasmeen-resty.herokuapp.com/)
 
 [Repo Link](https://github.com/yasmeenokh/resty/tree/base)
+
+[Netlify Link](https://sleepy-meitner-a5b5c4.netlify.app/)
