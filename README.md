@@ -14,15 +14,31 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
+
+##### Lab 26:
+
 ![uml](images/resty.png)
+
+##### Lab 27:
+
 ![uml](images/lab27.png)
+
+##### Lab 28:
+
+![uml](images/lab28.png)
+
+##### Lab 29:
+
+![uml](images/lab29.png)
+
+
 
 ## Links 
 
-[Pull Request](https://github.com/yasmeenokh/resty/pull/3)
+[Repo Link](https://github.com/yasmeenokh/resty/tree/base)
 
-[Pull Request](https://github.com/yasmeenokh/resty/pull/2)
+[Pull Requests](https://github.com/yasmeenokh/resty/pulls)
 
 [Heroku Link](https://yasmeen-resty.herokuapp.com/)
 
-[Repo Link](https://github.com/yasmeenokh/resty/tree/base)
+[Netlify Link](https://boring-kowalevski-d42a0e.netlify.app/)
