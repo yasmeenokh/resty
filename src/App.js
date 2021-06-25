@@ -5,6 +5,11 @@ import Footer from './components/footer/footer.jsx';
 import Form from './components/form/form.jsx';
 import Results from './components/Result/Result.jsx';
 import  History from './components/History/History.jsx';
+import HistoryPage from './components/historyPage/HistoryPage'
+import Help from './components/Help/help.jsx';
+import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router} from 'react-router-dom';
+
 import './App.scss';
 import './reset.scss';
 
@@ -60,8 +65,12 @@ stateHandler = (reqObj)=>{
  
   render() {
     return (
+      <Router>
+        {/* <Main/> */}
       <div className='app' >
       <Header />
+      <Switch>
+        <Route exact path='/'>
       <Form handler = {this.dataHandler} 
       stateHandler={this.stateHandler}
       url={this.state.url} 
@@ -75,8 +84,24 @@ stateHandler = (reqObj)=>{
       />
       <History history={this.state.history} handler={this.historyHandler} />
         </div>
+        </Route>
+        <Route path='/history'>
+          <div className="historyPath">
+
+        <HistoryPage history={this.state.history} handler={this.historyHandler} />
+        <Results
+      url={this.state.url} method={this.state.method} headers={this.state.headers} count={this.state.count} results={this.state.results} loading={this.state.loading} load={this.state.load} 
+      />
+          </div>
+        </Route>
+      <Route path ="/help">
+        <Help/>
+      </Route>
+        </Switch>
       <Footer />
      </div>
+     </Router>
+
     )
     
   }

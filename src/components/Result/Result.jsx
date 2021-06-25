@@ -4,8 +4,6 @@ import { If, Then, Else } from 'react-if'
 import Loader from 'react-loader-spinner';
 import '../form/form.scss';
 
-let dataArr= [];
-
 class Results extends React.Component {
 
 
@@ -34,8 +32,8 @@ class Results extends React.Component {
               <p> Count : {this.props.count}</p> 
               <p>Headers :   <JSONPretty src={this.props.headers} /></p>            
               <p>Results :  <JSONPretty  src={this.props.results}/> </p>       
-              {dataArr.push({ url: this.props.url, method: this.props.method, body: this.props.results })}
-              {window.localStorage.setItem('data', JSON.stringify(dataArr))}
+              {/* {dataArr.push({ url: this.props.url, method: this.props.method, body: this.props.results })}
+              {window.localStorage.setItem('data', JSON.stringify(dataArr))} */}
         </div>
             </Then>
           </If>
